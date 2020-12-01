@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "2192a57b-e4e8-44c8-816c-ec48cbfa2b89",
+		"name": "LaComanda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Crear Pedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtcGxlYWRvNUBtYWlsLmNvbSIsInRpcG8iOiJtb3pvIn0.7PkgzfK0ItSgw7FnEukWIHkjrMfl8jQ-e7in3Zo1QCc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombreCliente",
+									"value": "Paula",
+									"type": "text"
+								},
+								{
+									"key": "mesa",
+									"value": "11111",
+									"type": "text"
+								},
+								{
+									"key": "comidas",
+									"value": "[{\"idComida\":2},{\"idComida\":3}]",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}pedidos",
+							"host": [
+								"{{url}}pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Pedidos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtcGxlYWRvNUBtYWlsLmNvbSIsInRpcG8iOiJtb3pvIn0.7PkgzfK0ItSgw7FnEukWIHkjrMfl8jQ-e7in3Zo1QCc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}pedidos",
+							"host": [
+								"{{url}}pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar pedido por ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtcGxlYWRvNUBtYWlsLmNvbSIsInRpcG8iOiJtb3pvIn0.7PkgzfK0ItSgw7FnEukWIHkjrMfl8jQ-e7in3Zo1QCc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}pedidos/A1000",
+							"host": [
+								"{{url}}pedidos"
+							],
+							"path": [
+								"A1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Preparacion Cerveza",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtcGxlYWRvMUBtYWlsLmNvbSIsInRpcG8iOiJjZXJ2ZWNlcm8ifQ.P97BM1PSgdyvibj9xWXwYz3bbucFJ_g443V1PFcTdhQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}pedidos/prepararPendiente",
+							"host": [
+								"{{url}}pedidos"
+							],
+							"path": [
+								"prepararPendiente"
+							]
+						},
+						"description": " (con auth por token)"
+					},
+					"response": []
+				},
+				{
+					"name": "Preparacion Trago",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtcGxlYWRvMkBtYWlsLmNvbSIsInRpcG8iOiJiYXJ0ZW5kZXIifQ.BRQ9fXUOm-rBCH2cDH5rM3OjjENokHShpnxNyt4WjcU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}pedidos/prepararPendiente",
+							"host": [
+								"{{url}}pedidos"
+							],
+							"path": [
+								"prepararPendiente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Preparacion Cocina o CandyBar (Cocinero)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtcGxlYWRvM0BtYWlsLmNvbSIsInRpcG8iOiJjb2NpbmVybyJ9.r99IBpnDlS_dhBj5bW8QeUqsRSBhHsx8TTl3Wno7eAM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}pedidos/prepararPendiente",
+							"host": [
+								"{{url}}pedidos"
+							],
+							"path": [
+								"prepararPendiente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PedidoListo Cerveza",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtcGxlYWRvMUBtYWlsLmNvbSIsInRpcG8iOiJjZXJ2ZWNlcm8ifQ.P97BM1PSgdyvibj9xWXwYz3bbucFJ_g443V1PFcTdhQ"
+							}
+						],
+						"url": {
+							"raw": "{{url}}pedidos/pedidoListo",
+							"host": [
+								"{{url}}pedidos"
+							],
+							"path": [
+								"pedidoListo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PedidoListo Trago",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtcGxlYWRvMkBtYWlsLmNvbSIsInRpcG8iOiJiYXJ0ZW5kZXIifQ.BRQ9fXUOm-rBCH2cDH5rM3OjjENokHShpnxNyt4WjcU"
+							}
+						],
+						"url": {
+							"raw": "{{url}}pedidos/pedidoListo",
+							"host": [
+								"{{url}}pedidos"
+							],
+							"path": [
+								"pedidoListo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PedidoListo Cocina o CandyBar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVtcGxlYWRvMkBtYWlsLmNvbSIsInRpcG8iOiJiYXJ0ZW5kZXIifQ.BRQ9fXUOm-rBCH2cDH5rM3OjjENokHShpnxNyt4WjcU"
+							}
+						],
+						"url": {
+							"raw": "{{url}}pedidos/pedidoListo",
+							"host": [
+								"{{url}}pedidos"
+							],
+							"path": [
+								"pedidoListo"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuario ABM",
+			"item": [
+				{
+					"name": "Crear usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "mozo",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "empleado6@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}users",
+							"host": [
+								"{{url}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cambiar Estado Empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}users/suspender/{id}",
+							"host": [
+								"{{url}}users"
+							],
+							"path": [
+								"suspender",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "empleado5@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Cliente mesa/pedido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}clientes?idMesa=11111&idPedido=A1000",
+					"host": [
+						"{{url}}clientes"
+					],
+					"query": [
+						{
+							"key": "idMesa",
+							"value": "11111"
+						},
+						{
+							"key": "idPedido",
+							"value": "A1000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
